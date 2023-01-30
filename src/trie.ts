@@ -1,15 +1,8 @@
 export class Trie {
 	head: TrieNode;
 
-	constructor(contents: Array<string>) {
+	constructor() {
 		this.head = new TrieNode();
-		if (!!contents) {
-			this.load(contents);
-		}
-	}
-
-	load(contents: Array<string>): void {
-
 	}
 
 	add(word: string): boolean {

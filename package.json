@@ -3,7 +3,11 @@
   "version": "1.0.0",
   "description": "A module for performing a dictionary search",
   "main": "index.js",
+  "type": "module",
   "scripts": {
+    "start": "node index.js",
+    "build": "tsc --build && rollup dist/index.js --format cjs --file bundle.js",
+    "clean": "tsc --build --clean",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -18,5 +22,9 @@
   "homepage": "https://github.com/StevenC4/dict-search#readme",
   "dependencies": {
     "typescript": "^4.9.4"
+  },
+  "devDependencies": {
+    "@types/node": "^18.11.18",
+    "rollup": "^3.12.0"
   }
 }
