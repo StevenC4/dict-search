@@ -48,7 +48,7 @@ export class TrieNode {
 			if (!(firstLetter in this.children)) {
 				this.children[firstLetter] = new TrieNode();
 			}
-			this.children[firstLetter].add(this.children);
+			this.children[firstLetter].add(restOfWord);
 		}
 	}
 }
