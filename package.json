@@ -1,6 +1,6 @@
 {
   "name": "dictionary-search",
-  "version": "1.1.1",
+  "version": "1.2.0",
   "description": "A module for performing a dictionary search",
   "main": "src/index.js",
   "type": "module",
@@ -11,7 +11,7 @@
     "trie"
   ],
   "scripts": {
-    "format": "prettier --write \"src/**/*.ts\"",
+    "format": "prettier --write \"src/**/*.js\"",
     "version": "npm run format && git add -A src",
     "postversion": "git push && git push --tags",
     "test": "echo \"Error: no test specified\" && exit 1"
