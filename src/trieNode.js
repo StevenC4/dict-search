@@ -19,4 +19,4 @@ module.exports = class TrieNode {
       this.children[firstLetter].add(restOfWord);
     }
   }
-}
+};

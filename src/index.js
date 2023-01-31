@@ -21,7 +21,7 @@ module.exports = class DictSearch {
   }
 
   intersection(wordList) {
-    const intersection = new Set<string>();
+    const intersection = new Set();
     for (const word of wordList) {
       const wordProcessed = word.toLowerCase().trim();
       if (this.trie.has(wordProcessed)) {
@@ -32,7 +32,7 @@ module.exports = class DictSearch {
   }
 
   missing(wordList) {
-    const missing = new Set<string>();
+    const missing = new Set();
     for (const word of wordList) {
       const wordProcessed = word.toLowerCase().trim();
       if (!this.trie.has(wordProcessed)) {
