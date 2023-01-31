@@ -20,9 +20,9 @@ export class DictSearch {
 		}
 	}
 
-    intersection(wordList: Array<string>): Set<string> {
+    intersection(wordList: string[]): Set<string> {
         const intersection = new Set<string>();
-        for (let word of wordList) {
+        for (const word of wordList) {
             const wordProcessed = word.toLowerCase().trim();
             if (this.trie.has(wordProcessed)) {
                 intersection.add(wordProcessed);
@@ -31,9 +31,9 @@ export class DictSearch {
         return intersection;
     }
 
-    missing(wordList: Array<string>): Set<string> {
+    missing(wordList: string[]): Set<string> {
         const missing = new Set<string>();
-        for (let word of wordList) {
+        for (const word of wordList) {
             const wordProcessed = word.toLowerCase().trim();
             if (!this.trie.has(wordProcessed)) {
                 missing.add(wordProcessed);

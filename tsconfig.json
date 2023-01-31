@@ -1,14 +1,19 @@
 {
     "compilerOptions": {
-        "noImplicitAny": false,
+        "declaration": true,
+        "module": "commonjs",
+        "moduleResolution": "node",
         "noEmitOnError": true,
+        "noImplicitAny": false,
+        "outDir": "dist",
         "removeComments": false,
         "sourceMap": true,
-        "target": "es6",
-        "outDir": "dist",
-        "moduleResolution": "node"
+        "target": "es2022"
     },
     "include": [
-        "src/**/*.ts"
+        "src/**/*"
+    ],
+    "exclude": [
+        "node_modules"
     ]
 }
