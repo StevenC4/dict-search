@@ -1,15 +1,15 @@
-import {createReadStream} from 'fs';
-import * as readline from 'node:readline/promises';
-import {Trie} from './trie';
+const {createReadStream} = require('fs');
+const readline = require('node:readline').promises;
+const Trie = require('./trie');
 
-export default class DictSearch {
-  trie: Trie;
+module.exports = class DictSearch {
+  trie;
 
   constructor() {
     this.trie = new Trie();
   }
 
-  async loadFile(path: string) {
+  async loadFile(path) {
     const stream = createReadStream(path);
     const rl = readline.createInterface({
       input: stream,
@@ -20,7 +20,7 @@ export default class DictSearch {
     }
   }
 
-  intersection(wordList: string[]): Set<string> {
+  intersection(wordList) {
     const intersection = new Set<string>();
     for (const word of wordList) {
       const wordProcessed = word.toLowerCase().trim();
@@ -31,7 +31,7 @@ export default class DictSearch {
     return intersection;
   }
 
-  missing(wordList: string[]): Set<string> {
+  missing(wordList) {
     const missing = new Set<string>();
     for (const word of wordList) {
       const wordProcessed = word.toLowerCase().trim();

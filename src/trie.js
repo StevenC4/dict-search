@@ -1,13 +1,13 @@
-import {TrieNode} from './trieNode';
+const TrieNode = require('./trieNode');
 
-export class Trie {
-  head: TrieNode;
+module.exports = class Trie {
+  head;
 
   constructor() {
     this.head = new TrieNode();
   }
 
-  add(word: string): boolean {
+  add(word) {
     const lcWord = word.toLowerCase().trim();
     if (!this.has(word)) {
       this.head.add(lcWord);
@@ -16,7 +16,7 @@ export class Trie {
     return false;
   }
 
-  has(word: string): boolean {
+  has(word) {
     const lcWord = word.toLowerCase().trim();
     if (lcWord === '') {
       return false;

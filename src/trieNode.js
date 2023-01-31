@@ -1,13 +1,13 @@
-export class TrieNode {
-  isCompleteWord: boolean;
-  children: string[];
+module.exports = class TrieNode {
+  isCompleteWord;
+  children;
 
   constructor() {
     this.isCompleteWord = false;
     this.children = [];
   }
 
-  add(word: string): void {
+  add(word) {
     if (!!word.length) {
       this.isCompleteWord = true;
     } else {
