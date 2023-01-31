@@ -2,24 +2,34 @@
   "name": "dict-search",
   "version": "1.0.0",
   "description": "A module for performing a dictionary search",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "type": "module",
+  "keywords": ["dict", "dictionary", "search", "trie"],
   "scripts": {
     "build": "tsc --build",
     "clean": "tsc --build --clean",
-    "lint": "tslint -p tsconfig.json",
     "format": "prettier --write \"src/**/*.ts\"",
+    "lint": "tslint -p tsconfig.json",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm run lint",
+    "preversion" : "npm run lint",
+    "version" : "npm run format && git add -A src",
+    "postversion" : "git push && git push --tags",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/StevenC4/dict-search.git"
   },
-  "author": "",
+  "author": "stevenc4",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/StevenC4/dict-search/issues"
   },
+  "files": [
+    "dist/**/*"
+  ],
   "homepage": "https://github.com/StevenC4/dict-search#readme",
   "devDependencies": {
     "@types/node": "^18.11.18",
