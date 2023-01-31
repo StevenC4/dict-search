@@ -2,7 +2,7 @@ import {createReadStream} from 'fs';
 import * as readline from 'node:readline/promises';
 import {Trie} from './trie';
 
-export class DictSearch {
+export default class DictSearch {
   trie: Trie;
 
   constructor() {
