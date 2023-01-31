@@ -1,14 +1,19 @@
 {
     "compilerOptions": {
-        "declaration": true,
+        "lib": ["es2022"],
+        "target": "es2022",
         "module": "commonjs",
+        "strict": true,
+        "esModuleInterop": true,
+        "skipLibCheck": true,
+        "forceConsistentCasingInFileNames": true,
+        "declaration": true,
         "moduleResolution": "node",
         "noEmitOnError": true,
         "noImplicitAny": false,
         "outDir": "dist",
         "removeComments": false,
         "sourceMap": true,
-        "target": "es2022"
     },
     "include": [
         "src/**/*"
